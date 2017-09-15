@@ -1,0 +1,20 @@
+
+
+<html>
+<body>
+<form action='' method="get">
+Enter the value of N: <input type="text" name="n"><br><br>
+<input type="submit" name="submit" value="submit">
+</form>
+</body>
+</html>
+
+<?php
+if(isset($_GET['submit']))
+{
+$N=$_GET['n'];
+for($i=1;$i<=$N;$i++)
+{
+echo ($i."<br>");
+}}
+?>
