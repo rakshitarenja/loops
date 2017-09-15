@@ -1,0 +1,47 @@
+<html>
+<body>
+<form action='' method="GET">
+<h1>Program for using two nos. with different choices.</h1><br>
+<h2>Choices</h2><br>
+<b>Choice 1 : </b>Addition of two nos.<br> 
+<b>Choice 2 : </b>Subtraction of two nos.<br>
+<b>Choice 3 : </b>Multiplication of two nos.<br>
+<b>Choice 4 : </b>Division of two nos.<br><br>
+<h2> Please enter your Choice to get the result</h2>
+<input type="text" name="ch"/><br><br>
+Enter the value of A:<input type="text" name="a"/><br>
+Enter the value of B:<input type="text" name="b"/><br>
+<input type="submit" value="submit" name="submit"/>
+</form>
+</body>
+</html>
+
+<?php
+if(isset($_GET['submit']))
+{
+$ch=$_GET['ch'];
+$a=$_GET['a'];
+$b=$_GET['b'];
+
+switch($ch)
+	{
+	case 1 : $C=$a+$b;
+	echo ("Addition is ".$C);
+	break;
+	
+	case 2 : $C=$a-$b;
+	echo ("Subtraction is ".$C);
+	break;
+
+	case 3 : $C=$a*$b;
+	echo ("Multiplication is ".$C);
+	break;
+
+	case 4 : $C=$a/$b;
+	echo ("Division is ".$C);
+	break;
+
+	default: echo("Invalid Choice");
+	}
+}
+?>
