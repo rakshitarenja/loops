@@ -1,0 +1,33 @@
+swapWo3V.html
+<html>
+<head>
+<title>Swapping of two nos.
+</title></head>
+<body>
+<form action="swapWo3V.php" method="GET">
+Enter the values: <br>
+<b>A: </b><input type="text" name="a"/>
+<br>
+<b>B: </b><input type="text" name="b"/>
+<br>
+<input type="submit" value="submit"/>
+</form>
+</body>
+</html>
+
+swapWo3V.php
+<?php
+$A=$_GET['a'];
+$B=$_GET['b'];
+	echo "Value of A:".$A."<br>";
+	echo "Value of B:".$B."<br>";
+	
+	echo "Values after SWAPPING are:"."<br>";
+	
+		$A=$A+$B;
+		$B=$A-$B;
+		$A=$A-$B;
+
+echo "Value of A:".$A."<br>";
+echo "Value of B:".$B."<br>";
+?>
